@@ -1,9 +1,14 @@
-import { Injectable } from '@angular/core';
+import { PokemonsMock } from "./pokemons-mock";
+import { Injectable } from "@angular/core";
+import { Pokemon } from "./pokemon";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class PokedexService {
+  constructor() {}
 
-  constructor() { }
+  public getPokemons(): Pokemon[] {
+    return PokemonsMock;
+  }
 }
