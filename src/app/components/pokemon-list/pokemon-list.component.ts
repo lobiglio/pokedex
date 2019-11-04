@@ -1,6 +1,5 @@
 import { Pokemon } from "./../../shared/pokemon";
-import { Component, OnInit, Input, Output } from "@angular/core";
-import { EventEmitter } from "events";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: "app-pokemon-list",
@@ -9,10 +8,14 @@ import { EventEmitter } from "events";
 })
 export class PokemonListComponent implements OnInit {
   @Input() pokemons: Pokemon[];
-  // @Output() getPokemon: EventEmitter<any> = new EventEmitter();
+  @Output() getPokemon: EventEmitter<any> = new EventEmitter();
   pokemon: Pokemon;
 
   constructor() {}
 
   ngOnInit() {}
+
+  sendPokemon(pokemon) {
+    this.getPokemon.emit(pokemon);
+  }
 }

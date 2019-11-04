@@ -7,6 +7,7 @@ import { PokedexPageComponent } from "./pages/pokedex-page/pokedex-page.componen
 import { PokemonListComponent } from "./components/pokemon-list/pokemon-list.component";
 import { PokemonDetailComponent } from "./components/pokemon-detail/pokemon-detail.component";
 import { CreatePokemonPageComponent } from "./pages/create-pokemon-page/create-pokemon-page.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { CreatePokemonPageComponent } from "./pages/create-pokemon-page/create-p
     PokemonDetailComponent,
     CreatePokemonPageComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

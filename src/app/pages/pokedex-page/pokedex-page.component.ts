@@ -16,4 +16,9 @@ export class PokedexPageComponent implements OnInit {
   ngOnInit(): void {
     this.pokemons = this.pokedexService.getPokemons();
   }
+
+  receivePokemon($event) {
+    this.pokemon = $event;
+    console.log(this.pokemon.description);
+  }
 }

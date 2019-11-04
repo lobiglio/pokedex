@@ -1,1 +1,15 @@
-<app-pokemon-list [pokemons]="pokemons"></app-pokemon-list>
+<div class="container">
+  <div class="list-pokemons">
+    <app-pokemon-list
+      [pokemons]="pokemons"
+      (getPokemon)="receivePokemon($event)"
+    >
+    </app-pokemon-list>
+  </div>
+  <div class="detail-pokemon">
+    <app-pokemon-detail
+      *ngIf="pokemon != undefined"
+      [pokemon]="pokemon"
+    ></app-pokemon-detail>
+  </div>
+</div>
