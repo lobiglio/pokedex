@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokedexPageComponent } from './pages/pokedex-page/pokedex-page.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokedexPageComponent
+    PokedexPageComponent,
+    PokemonListComponent
   ],
   imports: [
     BrowserModule,
