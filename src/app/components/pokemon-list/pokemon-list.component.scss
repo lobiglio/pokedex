@@ -1,3 +1,12 @@
+.pokemon-container {
+  background-color: #e8f7f6;
+  border: 1px solid gray;
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px gray;
+  width: 30%;
+  margin-bottom: 12px;
+}
+
 h1 {
   text-align: center;
   color: gold;
@@ -5,5 +14,16 @@ h1 {
 }
 
 img {
+  width: 200px;
+  display: block;
   margin: 0 auto;
+}
+
+.btn {
+  background-color: #178113;
+}
+
+button {
+  display: block;
+  margin: 6px auto;
 }
