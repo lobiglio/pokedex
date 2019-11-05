@@ -11,4 +11,8 @@ export class PokedexService {
   public getPokemons(): Pokemon[] {
     return PokemonsMock;
   }
+
+  public addPokemon(pokemon: Pokemon) {
+    PokemonsMock.push(pokemon);
+  }
 }

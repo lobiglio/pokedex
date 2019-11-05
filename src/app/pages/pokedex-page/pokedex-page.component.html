@@ -1,11 +1,14 @@
 <div class="container">
+  <!-- Partie affichage des pokemons -->
   <div class="list-pokemons">
+    <button mat-raised-button routerLink="/create">Créer un pokémon</button>
     <app-pokemon-list
       [pokemons]="pokemons"
       (getPokemon)="receivePokemon($event)"
     >
     </app-pokemon-list>
   </div>
+  <!-- Partie affichage du détail -->
   <div class="detail-pokemon">
     <app-pokemon-detail
       *ngIf="pokemon != undefined"

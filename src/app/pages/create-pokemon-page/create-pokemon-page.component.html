@@ -1,1 +1,41 @@
-<p>create-pokemon-page works!</p>
+<div class="container">
+  <h1>Attrapez-les tous!</h1>
+  <form (submit)="myForm.valid && sendPokemon()" #myForm="ngForm">
+    <div class="example-container">
+      <input
+        placeholder="Name"
+        type="text"
+        [(ngModel)]="pokemon.name"
+        name="pokemonName"
+        #nameRef="ngModel"
+        required
+      />
+      <div *ngIf="myForm.submitted">
+        <div *ngIf="nameRef?.control.errors?.required">
+          Name is required
+        </div>
+      </div>
+      <input
+        placeholder="Image Url"
+        type="text"
+        [(ngModel)]="pokemon.imgUrl"
+        name="imgUrl"
+        #imgUrlRef="ngModel"
+        required
+      />
+      <div *ngIf="myForm.submitted">
+        <div *ngIf="imgUrlRef?.control.errors?.required">
+          Image Url is required
+        </div>
+      </div>
+
+      <textarea
+        placeholder="Description"
+        [(ngModel)]="pokemon.description"
+        name="description"
+      ></textarea>
+
+      <button mat-flat-button>Ajouter</button>
+    </div>
+  </form>
+</div>

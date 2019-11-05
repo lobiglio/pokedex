@@ -1,7 +1,7 @@
 <div class="pokemon-container" *ngFor="let pokemon of pokemons">
   <h1>{{ pokemon.name }}</h1>
   <img [src]="pokemon.imgUrl" alt="picture of pokemon" />
-  <button mat-raised-button class="btn" (click)="sendPokemon(pokemon)">
+  <button mat-raised-button class="btn-green" (click)="sendPokemon(pokemon)">
     Show me the description
   </button>
 </div>

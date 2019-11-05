@@ -1,0 +1,26 @@
+.container {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 18px;
+  color: #e65d0f;
+  text-shadow: 1px 1px 2px gray;
+  font-size: 2.5em;
+}
+input,
+textarea {
+  width: 100%;
+}
+
+button {
+  background-color: blue;
+}
